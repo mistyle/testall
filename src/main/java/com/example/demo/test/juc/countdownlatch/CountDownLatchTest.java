@@ -1,14 +1,14 @@
-package com.example.demo.test.juc;
+package com.example.demo.test.juc.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 
-public class CountDownLatchTest  extends Thread {
+public class CountDownLatchTest extends Thread {
 	private String name;
 	//第一阶段工作时间
 	private long time;
 	
 	private CountDownLatch countDownLatch;
-	public CountDownLatchTest(String name, long time,CountDownLatch countDownLatch) {
+	public CountDownLatchTest(String name, long time, CountDownLatch countDownLatch) {
 		super();
 		this.name = name;
 		this.time = time;

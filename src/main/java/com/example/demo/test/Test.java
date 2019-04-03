@@ -34,7 +34,7 @@ public class Test {
 		System.out.println("end");
 
 	}
-	
+
 	
     public static Integer methodA() {
         if(!semaphore.tryAcquire()) {

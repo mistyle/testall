@@ -1,8 +1,8 @@
-package com.example.demo.test.thread;
+package com.example.demo.test.juc.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 
-public class TestCountDownLatch	implements Runnable{
+public class TestCountDownLatch implements Runnable{
 	
 
 
