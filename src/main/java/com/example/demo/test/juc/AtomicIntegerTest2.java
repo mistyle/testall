@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 同步锁与CAS AtomicInteger对比测试
  * @author lenovo
- * TODO
+ *
  *
  */
 public class AtomicIntegerTest2 {

@@ -1,13 +1,8 @@
 package com.example.demo.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 
 
@@ -16,7 +11,11 @@ import javax.persistence.Table;
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
+	public User() {
+
+	}
+
 	private Long id;
 	public User(String userName, String passWord, String email, String nickName, String regTime) {
 		super();

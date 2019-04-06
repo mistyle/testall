@@ -11,6 +11,7 @@ package com.example.demo.test.circleDependency;//package com.example.demo.test.c
 //	public static void main(String[] args) {
 //		SpringApplication.run(Application.class, args);
 //	}
+  //测试结论：因为是单例的，所以可以循环依赖注入
 //
 //}
 //

@@ -19,7 +19,7 @@ public class NoticeObject implements Serializable {
 	}
 
 	public NoticeObject() {
-		// TODO Auto-generated constructor stub
+
 	}
 	
 	public NoticeObject(String serviceRequestId,int type, Object message) {

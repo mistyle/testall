@@ -1,7 +1,7 @@
 /**
 * @Title: JsonFormat.java
 * @Package demo.tools
-* @Description: TODO
+* @Description:
 * @author 陈杨
 * @date 2016年7月8日 下午8:14:53
 * @version V1.0
@@ -10,7 +10,7 @@ package com.example.demo.tools;
 
 /**
  * @ClassName: JsonFormat
- * @Description: TODO
+ * @Description:
  * @author 陈杨
  * @date 2016年7月8日 下午8:14:53
  */

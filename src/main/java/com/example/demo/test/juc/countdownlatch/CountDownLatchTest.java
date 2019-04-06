@@ -27,7 +27,7 @@ public class CountDownLatchTest extends Thread {
 			System.out.println(name+"第二阶段工作完成，消耗时间time="+(time+10000));// (5) work0,1,2 ,也可能是1，0，2，顺序不固定,
 			
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		
