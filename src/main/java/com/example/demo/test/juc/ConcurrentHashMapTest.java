@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * TODO  测试ConcurrentHashMapTest,顺便测试sleep
+ *   测试ConcurrentHashMapTest,顺便测试sleep
  * @author lenovo
  *
  */
