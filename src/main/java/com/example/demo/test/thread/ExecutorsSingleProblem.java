@@ -34,8 +34,13 @@ public class ExecutorsSingleProblem {
 
 		}, 1, 1, TimeUnit.SECONDS);
 
-		
-		scheduledExcutor.shutdown(); //如果是单例的，这里就不能shutdown了
+		//Thread.sleep(5000);
+		scheduledExcutor.shutdown(); //如果ScheduledExecutorService是单例的，这里就不能shutdown了,否则会报最上面的异常
+		/**
+		 * 解决办法:
+		 * (1) 加上上面的sleep,一定要保留充足的时间
+		 * （2）ScheduledExecutorService不做成单例
+		 */
 
 	}
 

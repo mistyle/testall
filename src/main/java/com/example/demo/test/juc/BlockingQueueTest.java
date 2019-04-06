@@ -1,4 +1,7 @@
-package com.example.demo.test.thread;
+package com.example.demo.test.juc;
+
+import com.example.demo.test.thread.Consumer;
+import com.example.demo.test.thread.Producer;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
@@ -9,7 +12,7 @@ public class BlockingQueueTest {
 	
 	public static void main(String[] args) throws InterruptedException {
 		          // 声明一个容量为10的缓存队列
-		         BlockingQueue<String> queue = new LinkedBlockingQueue<String>(2);
+		         BlockingQueue<String> queue = new LinkedBlockingQueue<String>(2); //阻塞的有界队列
 		  
 		         //new了三个生产者和一个消费者
 		         Producer producer1 = new Producer(queue);
