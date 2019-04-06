@@ -17,8 +17,8 @@ public class HelloController {
     @Autowired
     private HelloSender helloSender;
 
-    // http://localhost:8081/hello
-    @GetMapping(value = "/hello")
+    // http://localhost:8081/hello1
+    @GetMapping(value = "/hello1")
     public void hello() throws Exception {
         helloSender.send();
     }
