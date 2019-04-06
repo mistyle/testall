@@ -32,7 +32,7 @@ public class TestCountDownLatch implements Runnable{
 	            new Thread(new TestCountDownLatch(countDownLatch,"子线程" + (i+100))).start();
 	        }
 	        System.out.println("主线程阻塞,等待所有子线程执行完成");
-	        //endLatch.await()使得主线程（main）阻塞直到endLatch.countDown()为零才继续执行
+
 	        countDownLatch.await();
 	        System.out.println("所有线程执行完成!");
 	    }
