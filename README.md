@@ -30,11 +30,12 @@
      (3)test.circleDependency  循环依赖注入测试
      (4)test.commandlinerunner  预先数据加载测试
      (5)test.http.HttpTest http请求返回json格式数据测试
+     (5)test.LimiterTestApp 限速器，多长时间类接受多少个请求
  
 4.单元测试
     (1) LogTest  log打印测试
     (2) ApplicationTests 增删改查 web单元测试
-    (3) UserRepositoryTests  jpa保存操作
+    (3) UserRepositoryTests  jpa保存操作(数据库测试，新的注解)
     (3) User1MapperTest  mybatis测试
     (4) BenchMarkTest 压力测试，锁测试
     (5) com.example.demo.rabbit    rabbitmq测试
