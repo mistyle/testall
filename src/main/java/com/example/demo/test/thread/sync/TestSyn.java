@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
  * @program: testall
  * @Date: 2019/4/5 9:28
  * @Author: mistyle
- * @Description:
+ * @Description:  类锁与对象锁
  */
 public class TestSyn {
     public synchronized void showMsg() {

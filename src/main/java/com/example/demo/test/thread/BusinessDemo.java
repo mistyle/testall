@@ -6,9 +6,25 @@ package com.example.demo.test.thread;
  * @Author: mistyle
  * @Description:
  */
-public class BusinessDemo {
+public class BusinessDemo { //资源类，资源下面是业务，sunBusiness和mainBusiness
 
 	private boolean  isShowSonThread=true;
+
+	public  synchronized  void  business(int i,int a){
+
+
+		for(int j=1;j<=30;j++){
+           if(a==0) {
+			   System.out.println("子线程运行第" + i + "轮，第" + j + "次");
+		   }else{
+			   System.out.println("主线程运行第" + i + "轮，第" + j + "次");
+		   }
+
+		}
+
+
+	}
+
 
 	public  synchronized  void  sunBusiness(int i){
 		while(!isShowSonThread){
@@ -19,7 +35,9 @@ public class BusinessDemo {
 			}
 		}
 		for(int j=1;j<=30;j++){
-			System.out.println("子线程运行第"+i+"轮，第"+j+"次");
+
+				System.out.println("子线程运行第" + i + "轮，第" + j + "次");
+
 		}
 		isShowSonThread=false;  //打开开关
 		this.notify(); //通知主线程
