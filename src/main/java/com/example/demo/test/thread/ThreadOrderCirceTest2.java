@@ -13,11 +13,14 @@ public class ThreadOrderCirceTest2 {
 			@Override
 			public void run() {
 				for(int i=1;i<=50;i++){
+					businessDemo.business(i,0); //这种写法不能保证轮流循环执行50次
+					//如果将for(int i=1;i<=50;i++){放到businessDemo，就是主线程执行50次之后，再执行子线程50次
 					businessDemo.sunBusiness(i);
 				}
 			}
 		}).start();
 		for(int i=1;i<=50;i++){
+			businessDemo.business(i,1);
 			businessDemo.mainBusiness(i);
 		}
 	}

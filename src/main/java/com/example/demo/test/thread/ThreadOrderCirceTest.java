@@ -12,6 +12,7 @@ public class ThreadOrderCirceTest {
 			@Override
 			public void run() {
 				for(int i=1;i<=50;i++){
+					//子线程的业务
 					for(int j=1;j<=30;j++){
 						System.out.println("子线程运行第"+i+"轮，第"+j+"次");
 					}
@@ -19,6 +20,7 @@ public class ThreadOrderCirceTest {
 			}
 		}).start();
 		for(int i=1;i<=50;i++){
+			//主线程的业务
 			for(int j=1;j<=40;j++){
 				System.out.println("主线程运行第"+i+"轮，第"+j+"次");
 			}
