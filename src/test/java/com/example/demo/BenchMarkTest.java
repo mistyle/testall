@@ -15,7 +15,7 @@ import java.util.concurrent.CountDownLatch;
 //import com.example.demo.ticket.TicketServiceLockOne;
 
 
-//TODO  countDownLatch测试
+// countDownLatch测试
 @RunWith(SpringRunner.class)
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
