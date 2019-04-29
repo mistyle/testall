@@ -16,7 +16,7 @@ public class HashMapDemo {
 
         /** 多线程编辑100次*/
         for (int i = 0; i < 100; i++) {
-            new Thread(new EditThread(hashMap)).start();
+            new Thread(new EditThread(hashMap,i)).start();
         }
 
         /** 读取线程*/

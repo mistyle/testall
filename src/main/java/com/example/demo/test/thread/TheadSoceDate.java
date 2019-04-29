@@ -10,7 +10,7 @@ import java.util.Random;
  */
 public class TheadSoceDate {
 
-
+	private static int price ;
 	public static void main(String[] args) {
        for(int i=0;i<3;i++){
 		   new  Thread(new Runnable() {
@@ -19,10 +19,10 @@ public class TheadSoceDate {
 				   System.out.println(this);
 			   	// 字节类，资源，同一个锁对象
 				   synchronized(TheadSoceDate.class) { // synchronized(TheadSoceDate.class)这是类锁,synchronized(this)这是对象锁
-					   int price = new Random().nextInt(1000); //线程死掉了
+					    price = new Random().nextInt(1000); //线程死掉了
 					   System.out.println("产生线程的名称" + Thread.currentThread().getName() + "，价格信息是" + price);
-					   new A().getInfo(price);
-					   new B().getInfo(price);
+					   new A().getInfo();
+					   new B().getInfo();
 				   }
 			   }
 		   }).start();
@@ -31,13 +31,13 @@ public class TheadSoceDate {
 
 	}
 	static class A{
-		public void getInfo(int price){
+		public void getInfo(){
 			System.out.println(Thread.currentThread().getName()+"进入A模块，处理的价格信息是"+price);
 		}
 
 	}
 	static class B{
-		public void getInfo(int price){
+		public void getInfo(){
 			System.out.println(Thread.currentThread().getName()+"进入B模块，处理的价格信息是"+price);
 		}
 
