@@ -1,25 +1,24 @@
 package com.example.demo;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.concurrent.CountDownLatch;
-
+import com.example.demo.ticket.TicketService;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.example.demo.ticket.TicketService;
+import java.util.concurrent.CountDownLatch;
 //import com.example.demo.ticket.TicketServiceLock;
 //import com.example.demo.ticket.TicketServiceLockOne;
 
 
 //TODO  countDownLatch测试
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class BenchMarkTest {
 
 	long timed=0l;
@@ -38,7 +37,7 @@ public class BenchMarkTest {
 	private final static  String  ticket_seq="G296";
 	private final static    int  THREAD_NUM=2000; //2000
 
-	private CountDownLatch  countDownLatch =new CountDownLatch(2000);
+	private CountDownLatch  countDownLatch =new CountDownLatch(THREAD_NUM);
 
 	@Before
 	public void start(){
@@ -56,9 +55,9 @@ public class BenchMarkTest {
 			Thread thread=new Thread(() ->{
 
 				try{
-					System.out.println("sssss");
+					//System.out.println("sssss");
 					//等待countDownLatch为0，所有线程都start后，再运行后续的代码
-					//countDownLatch.await();
+					countDownLatch.await();
 					ticketService.queryTicket(ticket_seq);
 				}catch(Exception e){
 					e.printStackTrace();
@@ -67,7 +66,7 @@ public class BenchMarkTest {
 			threads[i]=thread;
 			thread.start();
 
-			//countDownLatch.countDown();
+			countDownLatch.countDown();
 		} //end for
 		//等待上面所有线程执行完毕之后，结束测试
 		for(Thread thread:threads) {

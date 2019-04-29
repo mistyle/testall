@@ -15,7 +15,7 @@
 //import com.example.demo.controller.HelloWorldController;
 //
 //@RunWith(SpringRunner.class)
-//@SpringBootTest
+//@SpringBootTest  或者@WebMvcTest(EmployeeController.class) 或者@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 //public class HelloWorldControlerTests  {
 //	
 //	private MockMvc mvc;
