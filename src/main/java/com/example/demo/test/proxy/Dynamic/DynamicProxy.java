@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
  * @program: testall
  * @Date: 2019/4/29 9:41
  * @Author: mistyle
- * @Description:
+ * @Description:  动态代理类
  */
 public class DynamicProxy implements InvocationHandler
 {

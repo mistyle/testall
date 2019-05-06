@@ -27,8 +27,26 @@ public class Client {
 		Subject subject = (Subject) Proxy.newProxyInstance(handler.getClass().getClassLoader(), realSubject
 				.getClass().getInterfaces(), handler);
 
-		System.out.println(subject.getClass().getName());
-		subject.rent();
+		System.out.println(handler.getClass()); //DynamicProxy
+		System.out.println(realSubject.getClass().getInterfaces());
+		System.out.println(handler); //DynamicProxy@3d494fbf   动态代理对象
+		System.out.println(subject.getClass().getName()); //$Proxy0
+		//subject.rent();
 		//subject.hello("world");
 	}
+
+	/**
+	 * 打印结果：
+	 * $Proxy0
+	 *
+	 * before rent house
+	 * Method:public abstract void com.xiaoluo.dynamicproxy.Subject.rent()
+	 * I want to rent my house
+	 * after rent house
+	 *
+	 * before rent house
+	 * Method:public abstract void com.xiaoluo.dynamicproxy.Subject.hello(java.lang.String)
+	 * hello: world
+	 * after rent house
+	 */
 }
