@@ -1,4 +1,4 @@
-package com.example.demo.test.thread;
+package com.example.demo.test.thread.sync;
 
 /**
  * @program: testall

@@ -1,4 +1,4 @@
-package com.example.demo.test.juc;
+package com.example.demo.test.juc.atomic;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;

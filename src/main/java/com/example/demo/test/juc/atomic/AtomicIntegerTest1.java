@@ -1,4 +1,4 @@
-package com.example.demo.test.juc;
+package com.example.demo.test.juc.atomic;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

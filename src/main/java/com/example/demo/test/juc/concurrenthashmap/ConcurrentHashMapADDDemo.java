@@ -1,4 +1,4 @@
-package com.example.demo.test.juc;
+package com.example.demo.test.juc.concurrenthashmap;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
  * @Author: mistyle
  * @Description:
  */
-public class ConcurrentHashMapDemo {
+public class ConcurrentHashMapADDDemo {
 
 
 
