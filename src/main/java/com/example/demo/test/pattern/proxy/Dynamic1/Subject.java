@@ -1,4 +1,4 @@
-package com.example.demo.test.proxy.Dynamic1;
+package com.example.demo.test.pattern.proxy.Dynamic1;
 
 /**
  * @program: testall

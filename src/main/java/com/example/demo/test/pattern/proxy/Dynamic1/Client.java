@@ -1,4 +1,4 @@
-package com.example.demo.test.proxy.Dynamic1;
+package com.example.demo.test.pattern.proxy.Dynamic1;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
@@ -16,7 +16,7 @@ public class Client {
 public static void main(String[] args) throws Throwable{
 		// TODO Auto-generated method stub 
 
-		Subject rs=new RealSubject();//这里指定被代理类 
+		Subject rs=new RealSubject();//这里指定被代理类
 		InvocationHandler ds=new DynamicSubject(rs);
 		Class<?> cls=rs.getClass();
 

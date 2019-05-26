@@ -1,4 +1,4 @@
-package com.example.demo.test.proxy.Dynamic1;
+package com.example.demo.test.pattern.proxy.Dynamic1;
 
 /**
  * @program: testall
@@ -6,7 +6,7 @@ package com.example.demo.test.proxy.Dynamic1;
  * @Author: mistyle
  * @Description:
  */
-public class RealSubject  implements  Subject{
+public class RealSubject  implements Subject {
 	public void request(){
 		System.out.println("From real subject");
 	}

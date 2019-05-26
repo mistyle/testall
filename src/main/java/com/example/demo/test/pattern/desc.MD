@@ -1,0 +1,6 @@
+prototype是原型模式
+singleton是单例模式
+staticfactory是静态工厂模式
+template是模板模式
+strategy是策略模式
+proxy 是代理模式
